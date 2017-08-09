@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euler", "Euler\Euler.csproj", "{7A5C7869-B4B4-4520-A530-E93DDE96494B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerTests", "EulerTests\EulerTests.csproj", "{3BC484BB-468A-4108-83FF-DCA8EC4CCDCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A5C7869-B4B4-4520-A530-E93DDE96494B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5C7869-B4B4-4520-A530-E93DDE96494B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5C7869-B4B4-4520-A530-E93DDE96494B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5C7869-B4B4-4520-A530-E93DDE96494B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC484BB-468A-4108-83FF-DCA8EC4CCDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC484BB-468A-4108-83FF-DCA8EC4CCDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC484BB-468A-4108-83FF-DCA8EC4CCDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC484BB-468A-4108-83FF-DCA8EC4CCDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
