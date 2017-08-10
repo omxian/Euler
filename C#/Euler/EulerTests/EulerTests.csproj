@@ -51,6 +51,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="EvenFibonacciNumbersTests.cs" />
+    <Compile Include="HelperTests.cs" />
     <Compile Include="MultiplesOf3And5Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
