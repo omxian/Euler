@@ -1,2 +1,2 @@
 # Euler
-Project Euler C# Solution
+Project Euler C# Solution and testcase
