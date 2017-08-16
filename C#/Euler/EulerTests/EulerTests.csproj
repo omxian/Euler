@@ -57,6 +57,7 @@
     <Compile Include="LargestPrimeFactorTests.cs" />
     <Compile Include="MultiplesOf3And5Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SmallestMultipleTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Euler\Euler.csproj">
