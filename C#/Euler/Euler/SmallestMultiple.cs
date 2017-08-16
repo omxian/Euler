@@ -25,11 +25,6 @@ namespace Euler
             int target = num;
             Dictionary<int, int> result = new Dictionary<int, int>();
 
-            if (num == 16)
-            {
-                int f = 14;
-            }
-
             while(true)
             {
                 for (int i = 2; i <= target; i++)
