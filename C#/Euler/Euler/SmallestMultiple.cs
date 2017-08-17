@@ -10,6 +10,12 @@ namespace Euler
     {
         //key某个数字，value单次分解数量
         Dictionary<int, int> numberDecompose = new Dictionary<int, int>();
+
+        /// <summary>
+        /// 朴素的计算方式，没有想到更深入的一层
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
         public long Solution1(int n)
         {
             for (int current = 2; current <= n; current++)
@@ -25,7 +31,7 @@ namespace Euler
             int target = num;
             Dictionary<int, int> result = new Dictionary<int, int>();
 
-            while(true)
+            while (true)
             {
                 for (int i = 2; i <= target; i++)
                 {
@@ -50,8 +56,6 @@ namespace Euler
                     break;
                 }
             }
-            
-            
 
             foreach (KeyValuePair<int, int> kvp in result)
             {
@@ -67,7 +71,7 @@ namespace Euler
         }
 
         /// <summary>
-        /// 根据计算结果
+        /// 计算结果
         /// </summary>
         private long GetResult()
         {
@@ -76,8 +80,49 @@ namespace Euler
             {
                 result *= (long)Math.Pow(kvp.Key, kvp.Value);
             }
+            return result;
+        }
+
+
+        /// <summary>
+        /// 1.先计算出小于等于n的所有素数
+        /// 2.计算结果
+        /// 结果等于 所有素数的 Math.Pow(pList[i], Math.Floor(Math.Log(n,pList[i])) 乘积
+        /// 如 n = 5 则 2^2 * 3^1 * 5^1
+        /// n = 5 则 2^4 * 3^2 * 5^1 * 11^1 * ... *19^1;
+        /// </summary>
+        public long Solution2(int n)
+        {
+            List<int> pList = new List<int>();
+            GetPrimeList(pList,n);
+
+            int result = 1;
+
+            for (int i = 0; i < pList.Count; i++)
+            {
+                result *= (int)Math.Pow(pList[i], Math.Floor(Math.Log(n,pList[i])));
+            }
 
             return result;
+        }
+
+        /// <summary>
+        /// 求2->n中的所有素数
+        /// </summary>
+        private void GetPrimeList(List<int> list,int target)
+        {
+            for (int number = 2; number <= target; number++)
+            {
+                for (int divisor = 2; divisor < number; divisor++)
+                {
+                    if (number % divisor == 0)
+                    {
+                        goto nextNumber;
+                    }
+                }
+                list.Add(number);
+                nextNumber:;
+            }
         }
     }
 }

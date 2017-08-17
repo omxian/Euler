@@ -16,6 +16,15 @@ namespace Euler.Tests
         {
             Assert.AreEqual(232792560, new SmallestMultiple().Solution1(20));
             Assert.AreEqual(2520, new SmallestMultiple().Solution1(10));
+            Assert.AreEqual(60, new SmallestMultiple().Solution1(5));
+        }
+
+        [TestMethod()]
+        public void Solution2Test()
+        {
+            Assert.AreEqual(232792560, new SmallestMultiple().Solution2(20));
+            Assert.AreEqual(2520, new SmallestMultiple().Solution2(10));
+            Assert.AreEqual(60, new SmallestMultiple().Solution2(5));
         }
     }
 }
