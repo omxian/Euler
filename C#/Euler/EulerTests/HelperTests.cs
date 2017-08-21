@@ -30,7 +30,13 @@ namespace Euler.Tests
             Assert.IsTrue(Helper.IsPrime(11));
             Assert.IsTrue(Helper.IsPrime(13));
             Assert.IsTrue(Helper.IsPrime(17));
-
+            Assert.IsTrue(Helper.IsPrime(19));
+            Assert.IsTrue(Helper.IsPrime(23));
+            Assert.IsTrue(Helper.IsPrime(29));
+            Assert.IsTrue(Helper.IsPrime(31));
+            Assert.IsTrue(Helper.IsPrime(997));
+            Assert.IsTrue(Helper.IsPrime(991));
+            Assert.IsTrue(Helper.IsPrime(983));
             Assert.IsFalse(Helper.IsPrime(-2));
             Assert.IsFalse(Helper.IsPrime(0));
             Assert.IsFalse(Helper.IsPrime(1));

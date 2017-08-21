@@ -36,24 +36,45 @@ namespace Euler
                 return primeCheck[number];
             }
 
-            if (number < 2)
+            if (number < 2) // 负数，0，1 false
             {
                 primeCheck.Add(number, false);
                 return false;
             }
-
-
-            for (long i = 2; i <= number / 2; i++)
+            else if (number < 4) // 2,3 true
             {
-                if (number % i == 0)
-                {
-                    primeCheck.Add(number, false);
-                    return false;
-                }
+                primeCheck.Add(number, true);
+                return true;
             }
-            
-            primeCheck.Add(number, true);
-            return true;
+            else if (number % 2 == 0) //能被2整除 false
+            {
+                primeCheck.Add(number, false);
+                return false;
+            }
+            else if (number < 9) // 已经排除 4,6,8 true
+            {
+                primeCheck.Add(number, true);
+                return true;
+            }
+            else if (number % 3 == 0) //能被3整出 false
+            {
+                primeCheck.Add(number, false);
+                return false;
+            }
+            else
+            {
+                for (long i = 5; i <= Math.Sqrt(number) ; i = i + 2) //没有必要计算到n，没有必要计算偶数
+                {
+                    if (number % i == 0)
+                    {
+                        primeCheck.Add(number, false);
+                        return false;
+                    }
+                }
+
+                primeCheck.Add(number, true);
+                return true;
+            }
         }
     }
 }
