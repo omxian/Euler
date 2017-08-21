@@ -12,13 +12,13 @@ namespace Euler.Tests
     public class EvenFibonacciNumbersTests
     {
         [TestMethod()]
-        public void Solution1Test()
+        public void EvenFibonacciNumbers_Solution1Test()
         {
             Assert.AreEqual(4613732, new EvenFibonacciNumbers().Solution1());
         }
 
         [TestMethod()]
-        public void Solution2Test()
+        public void EvenFibonacciNumbers_Solution2Test()
         {
             Assert.AreEqual(4613732, new EvenFibonacciNumbers().Solution2());
         }

@@ -10,8 +10,7 @@ namespace Euler
     //What is the largest prime factor of the number 600851475143 ?
     public class LargestPrimeFactor
     {
-        //缓存数据减少计算量
-        private Dictionary<long, bool> primeCheck = new Dictionary<long, bool>();
+        
         //素因子列表
         private List<long> primeFactor = new List<long>();
 
@@ -29,7 +28,7 @@ namespace Euler
             for (long i = 2; i < number/2; i++)
             {
                 long divide = number % i;
-                if (divide == 0 && IsPrime(i))
+                if (divide == 0 && Helper.IsPrime(i))
                 {
                     primeFactor.Add(i);
 
@@ -55,32 +54,12 @@ namespace Euler
             for (long i = number / 2; i > 1; i--)
             {
                 long divide = number % i;
-                if (divide == 0 && IsPrime(i))
+                if (divide == 0 && Helper.IsPrime(i))
                 {
                     return i;
                 }
             }
             return -1;
-        }
-
-        //素数检查
-        private bool IsPrime(long number)
-        {
-            if (primeCheck.ContainsKey(number))
-            {
-                return primeCheck[number];
-            }
-
-            for (long i = 2; i < number/2; i++)
-            {
-                if (number % i == 0)
-                {
-                    primeCheck.Add(number,false);
-                    return false;
-                }
-            }
-            primeCheck.Add(number,true);
-            return true;
         }
     }
 }

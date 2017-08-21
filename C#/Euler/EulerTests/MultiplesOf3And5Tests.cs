@@ -12,14 +12,14 @@ namespace Euler.Tests
     public class MultiplesOf3And5Tests
     {
         [TestMethod()]
-        public void FindSumNumberSolution1Test()
+        public void MultiplesOf3And5_Solution1Test()
         {
             Assert.AreEqual(23, new MultiplesOf3And5().FindSumNumberSolution1(10));
             Assert.AreEqual(233168, new MultiplesOf3And5().FindSumNumberSolution1(1000));
         }
 
         [TestMethod()]
-        public void FindSumNumberSolution2Test()
+        public void MultiplesOf3And5_Solution2Test()
         {
             for (int i = 1; i < 1001; i++)
             {

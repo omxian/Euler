@@ -12,7 +12,7 @@ namespace Euler.Tests
     public class SmallestMultipleTests
     {
         [TestMethod()]
-        public void Solution1Test()
+        public void SmallestMultiple_Solution1Test()
         {
             Assert.AreEqual(232792560, new SmallestMultiple().Solution1(20));
             Assert.AreEqual(2520, new SmallestMultiple().Solution1(10));
@@ -20,7 +20,7 @@ namespace Euler.Tests
         }
 
         [TestMethod()]
-        public void Solution2Test()
+        public void SmallestMultiple_Solution2Test()
         {
             Assert.AreEqual(232792560, new SmallestMultiple().Solution2(20));
             Assert.AreEqual(2520, new SmallestMultiple().Solution2(10));

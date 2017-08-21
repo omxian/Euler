@@ -12,13 +12,13 @@ namespace Euler.Tests
     public class LargestPalindromeProductTests
     {
         [TestMethod()]
-        public void Solution1Test()
+        public void LargestPalindromeProduct_Solution1Test()
         {
             Assert.AreEqual(906609, new LargestPalindromeProduct().Solution1());
         }
 
         [TestMethod()]
-        public void Solution2Test()
+        public void LargestPalindromeProduct_Solution2Test()
         {
             Assert.AreEqual(9, new LargestPalindromeProduct().Solution2(1));
             Assert.AreEqual(9009, new LargestPalindromeProduct().Solution2(2));

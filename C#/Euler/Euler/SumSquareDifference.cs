@@ -38,7 +38,7 @@ namespace Euler
             //等差数列求和 -> 平方
             long sumSquare = targetNumber*(targetNumber+1)/2;
             sumSquare *= sumSquare;
-            //平方和公式
+            //平方和公式 
             long squareSum = ((2*targetNumber+1) * (targetNumber +1) * targetNumber)/6;
 
             return sumSquare - squareSum;

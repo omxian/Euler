@@ -12,7 +12,7 @@ namespace Euler.Tests
     public class LargestPrimeFactorTests
     {
         [TestMethod()]
-        public void Solution1Test()
+        public void LargestPrimeFactor_Solution1Test()
         {
             Assert.AreEqual(29, new LargestPrimeFactor().Solution1(13195));
             Assert.AreEqual(6857, new LargestPrimeFactor().Solution1(600851475143));

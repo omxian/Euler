@@ -12,14 +12,14 @@ namespace Euler.Tests
     public class SumSquareDifferenceTests
     {
         [TestMethod()]
-        public void Solution1Test()
+        public void SumSquareDifference_Solution1Test()
         {
             Assert.AreEqual(2640, new SumSquareDifference().Solution1(10));
             Assert.AreEqual(25164150, new SumSquareDifference().Solution1(100));
         }
 
         [TestMethod()]
-        public void Solution2Test()
+        public void SumSquareDifference_Solution2Test()
         {
             Assert.AreEqual(2640, new SumSquareDifference().Solution2(10));
             Assert.AreEqual(25164150, new SumSquareDifference().Solution2(100));
