@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 namespace Euler.Tests
 {
     [TestClass()]
-    public class LargestProductInASeriesTests
+    public class SpecialPythagoreanTripletTests
     {
         [TestMethod()]
-        public void LargestProductInASeries_Solution1Test()
+        public void SpecialPythagoreanTriplet_Solution1Test()
         {
-            Assert.AreEqual(5832, new LargestProductInASeries().Solution1(4));
-            Assert.AreEqual(23514624000, new LargestProductInASeries().Solution1(13));
+            Assert.AreEqual(31875000,new SpecialPythagoreanTriplet().Solution1(1000));
         }
     }
 }

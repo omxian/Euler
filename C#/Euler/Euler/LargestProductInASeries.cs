@@ -18,25 +18,38 @@ namespace Euler
         public long Solution1(int n)
         {
             long maxNumber = long.MinValue;
-            for (int i = 0; i < series.Length; i++)
+            int currentIndex = 0;
+            //使用队列优化执行效率
+            Queue<int> queue = new Queue<int>();
+            while (currentIndex < series.Length)
             {
-                if (i + n <= series.Length)
+                if (queue.Count == n)
                 {
-                    long number = 1;
-                    //此处可用队列优化，没有必要每次都去切割字符串
-                    foreach (char ch in series.Substring(i, n))
-                    {
-                        number *= int.Parse(ch.ToString());
-                    }
-                    maxNumber = Math.Max(number, maxNumber);
+                    maxNumber = Math.Max(maxNumber,CountQueue(queue));
+                    queue.Dequeue();
+                    queue.Enqueue(int.Parse(series[currentIndex].ToString()));
                 }
                 else
                 {
-                    break;
+                    queue.Enqueue(int.Parse(series[currentIndex].ToString()));
                 }
+                currentIndex++;
             }
 
             return maxNumber;
+        }
+
+        /// <summary>
+        /// 队列中所有元素乘积
+        /// </summary>
+        private long CountQueue(Queue<int> queue)
+        {
+            long result = 1;
+            foreach (int num in queue)
+            {
+                result *= num;
+            }
+            return result;
         }
     }
 }
