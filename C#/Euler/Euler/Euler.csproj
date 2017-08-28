@@ -48,6 +48,7 @@
     <Compile Include="Helper.cs" />
     <Compile Include="LargestPalindromeProduct.cs" />
     <Compile Include="LargestPrimeFactor.cs" />
+    <Compile Include="LargestProductInAGrid.cs" />
     <Compile Include="LargestProductInASeries.cs" />
     <Compile Include="MultiplesOf3And5.cs" />
     <Compile Include="Program.cs" />

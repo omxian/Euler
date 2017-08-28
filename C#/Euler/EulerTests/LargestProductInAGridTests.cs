@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 namespace Euler.Tests
 {
     [TestClass()]
-    public class SummationOfPrimesTests
+    public class LargestProductInAGridTests
     {
         [TestMethod()]
-        public void SummationOfPrimes_Solution1Test()
+        public void LargestProductInAGrid_Solution1Test()
         {
-            Assert.AreEqual(17, new SummationOfPrimes().Solution1(10));
-            Assert.AreEqual(142913828922, new SummationOfPrimes().Solution1(2000000));
+            Assert.AreEqual(70600674, new LargestProductInAGrid().Solution1(4));
         }
     }
 }
