@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="EvenFibonacciNumbersTests.cs" />
     <Compile Include="HelperTests.cs" />
+    <Compile Include="HighlyDivisibleTriangularNumberTests.cs" />
     <Compile Include="LargestPalindromeProductTests.cs" />
     <Compile Include="LargestPrimeFactorTests.cs" />
     <Compile Include="LargestProductInAGridTests.cs" />
