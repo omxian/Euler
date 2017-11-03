@@ -71,6 +71,7 @@
     <Compile Include="LatticePaths.cs" />
     <Compile Include="LongestCollatzSequence.cs" />
     <Compile Include="MultiplesOf3And5.cs" />
+    <Compile Include="NumberLetterCounts.cs" />
     <Compile Include="PowerDigitSum.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
