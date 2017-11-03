@@ -62,29 +62,26 @@ namespace Euler
         /// </summary>
         public long FindPath2(int width,int height)
         {
-            long[,] arr = new long[width + 1, height + 1];
+            int m = width + 1;
+            int n = height + 1;
+            long[,] arr = new long[m, n];
             arr[0, 0] = 1;
-
-            for(int i=0; i<width+1;i++)
+            
+            for(int i=0; i<m; i++)
             {
-                for(int j=0; j<height+1; j++)
+                arr[i, 0] = 1;
+            }
+
+            for(int j=0; j<n; j++)
+            {
+                arr[0, j] = 1;
+            }
+
+            for(int i=1; i<m;i++)
+            {
+                for(int j=1; j<n; j++)
                 {
-                    if(i==0 && j ==0)
-                    {
-                        continue;
-                    }
-                    if(i==0)
-                    {
-                        arr[i, j] = arr[i, j - 1];
-                    }
-                    else if(j==0)
-                    {
-                        arr[i, j] = arr[i - 1, j];
-                    }
-                    else
-                    {
-                        arr[i, j] = arr[i, j - 1] + arr[i - 1, j];
-                    }
+                    arr[i, j] = arr[i, j - 1] + arr[i - 1, j];
                 }
             }
 
