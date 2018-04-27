@@ -48,29 +48,28 @@ namespace Euler
         /// </summary>
         private int CountMaximumPathSum()
         {
-            List<List<SearchItem>> searchList = new List<List<SearchItem>>();
+            List<SearchItem> searchList = null;
 
             for (int i = data.Count - 1; i >= 0; i--)
             {
-                List<SearchItem> list = new List<SearchItem>();
-                int prevIndex = data.Count - 2 - i;
+                List<SearchItem> newList = new List<SearchItem>();
                 for (int j = 0; j < data[i].Count; j++)
                 {
-                    if (searchList.Count > 0)
+                    if (searchList != null)
                     {
-                        AddItem(list, searchList[prevIndex], i, j);
+                        AddItem(newList, searchList, i, j);
                     }
                     else
                     {
-                        AddItem(list, data[i][j], j);
+                        AddItem(newList, data[i][j], j);
                     }
                 }
-                searchList.Add(list);
+                searchList = newList;
             }
             return GetMaxSumInSearchList(searchList);
         }
 
-        private void AddItem(List<SearchItem> list, List<SearchItem> prevList, int i, int j)
+        private void AddItem(List<SearchItem> newList, List<SearchItem> prevList, int i, int j)
         {
             for (int k = 0; k < prevList.Count; k++)
             {
@@ -85,7 +84,7 @@ namespace Euler
                 }
                 else
                 {
-                    AddItem(list, prevItem.sum + data[i][j], j);
+                    AddItem(newList, prevItem.sum + data[i][j], j);
                 }
             }
         }
@@ -98,10 +97,10 @@ namespace Euler
             list.Add(item);
         }
 
-        private int GetMaxSumInSearchList(List<List<SearchItem>> searchList)
+        private int GetMaxSumInSearchList(List<SearchItem> searchList)
         {
             int max = int.MinValue;
-            foreach (SearchItem item in searchList[searchList.Count - 1])
+            foreach (SearchItem item in searchList)
             {
                 max = Math.Max(item.sum, max);
             }

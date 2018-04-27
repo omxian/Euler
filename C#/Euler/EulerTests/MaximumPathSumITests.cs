@@ -38,7 +38,7 @@ namespace Euler.Tests
             ));
 
             //数据量大的情况下发生溢出
-            //考虑优化
+            //考虑优化算法
             //Assert.AreEqual(1074, new MaximumPathSumI().Solution(@" 59
             //                                                        73 41
             //                                                        52 40 09
