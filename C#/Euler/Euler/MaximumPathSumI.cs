@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Euler
 {
+    struct SearchItem
+    {
+        public int sum;
+        public int index;
+    }
+
     public class MaximumPathSumI
     {
         List<List<int>> data;
@@ -35,12 +41,6 @@ namespace Euler
             data = result;
         }
 
-        struct SearchItem
-        {
-            public int sum;
-            public int index;
-        }
-
         /// <summary>
         /// 先考虑蛮力解决，如果效率不行在考虑使用启发式算法
         /// 从后向前算，最后遍历一次就可以找到最大的了
@@ -56,11 +56,46 @@ namespace Euler
                 int prevIndex = data.Count - 2 - i;
                 for (int j = 0; j < data[i].Count; j++)
                 {
-                    AddSearchItem(list, searchList, prevIndex, i, j);
+                    if (searchList.Count > 0)
+                    {
+                        AddItem(list, searchList[prevIndex], i, j);
+                    }
+                    else
+                    {
+                        AddItem(list, data[i][j], j);
+                    }
                 }
                 searchList.Add(list);
             }
             return GetMaxSumInSearchList(searchList);
+        }
+
+        private void AddItem(List<SearchItem> list, List<SearchItem> prevList, int i, int j)
+        {
+            for (int k = 0; k < prevList.Count; k++)
+            {
+                SearchItem prevItem = prevList[k];
+                if (prevItem.index > (j + 1))
+                {
+                    break;
+                }
+                else if (prevItem.index < j)
+                {
+                    continue;
+                }
+                else
+                {
+                    AddItem(list, prevItem.sum + data[i][j], j);
+                }
+            }
+        }
+
+        private void AddItem(List<SearchItem> list,int sum,int index)
+        {
+            SearchItem item = new SearchItem();
+            item.sum = sum;
+            item.index = index;
+            list.Add(item);
         }
 
         private int GetMaxSumInSearchList(List<List<SearchItem>> searchList)
@@ -72,40 +107,6 @@ namespace Euler
             }
 
             return max;
-        }
-
-        private void AddSearchItem(List<SearchItem> list , List<List<SearchItem>> searchList,int prevIndex,int i,int j)
-        {
-            if (searchList.Count > 0)
-            {
-                List<SearchItem> prevList = searchList[prevIndex];
-                for (int k = 0; k < prevList.Count; k++)
-                {
-                    SearchItem prevItem = prevList[k];
-                    if (prevItem.index > (j + 1))
-                    {
-                        break;
-                    }
-                    else if (prevItem.index < j)
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        SearchItem item = new SearchItem();
-                        item.sum = prevItem.sum + data[i][j];
-                        item.index = j;
-                        list.Add(item);
-                    }
-                }
-            }
-            else
-            {
-                SearchItem item = new SearchItem();
-                item.sum = data[i][j];
-                item.index = j;
-                list.Add(item);
-            }
         }
     }
 }
