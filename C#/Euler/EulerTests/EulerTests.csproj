@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="CountingSundaysTests.cs" />
     <Compile Include="EvenFibonacciNumbersTests.cs" />
+    <Compile Include="FactorialDigitSumTests.cs" />
     <Compile Include="HelperTests.cs" />
     <Compile Include="HighlyDivisibleTriangularNumberTests.cs" />
     <Compile Include="LargestPalindromeProductTests.cs" />
