@@ -69,6 +69,7 @@
     <Compile Include="LongestCollatzSequenceTests.cs" />
     <Compile Include="MaximumPathSumITests.cs" />
     <Compile Include="MultiplesOf3And5Tests.cs" />
+    <Compile Include="NamesScoresTests.cs" />
     <Compile Include="NumberLetterCountsTests.cs" />
     <Compile Include="PowerDigitSumTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
