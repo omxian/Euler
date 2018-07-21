@@ -54,6 +54,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AmicableNumbersTests.cs" />
     <Compile Include="CountingSundaysTests.cs" />
     <Compile Include="EvenFibonacciNumbersTests.cs" />
     <Compile Include="FactorialDigitSumTests.cs" />

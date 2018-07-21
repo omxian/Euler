@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="10001stPrime.cs" />
+    <Compile Include="AmicableNumbers.cs" />
     <Compile Include="CountingSundays.cs" />
     <Compile Include="EvenFibonacciNumbers.cs" />
     <Compile Include="FactorialDigitSum.cs" />
