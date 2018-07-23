@@ -76,6 +76,7 @@
     <Compile Include="MaximumPathSumI.cs" />
     <Compile Include="MultiplesOf3And5.cs" />
     <Compile Include="NamesScores.cs" />
+    <Compile Include="NonAbundantSums.cs" />
     <Compile Include="NumberLetterCounts.cs" />
     <Compile Include="PowerDigitSum.cs" />
     <Compile Include="Program.cs" />
